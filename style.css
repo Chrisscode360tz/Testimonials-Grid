@@ -33,6 +33,7 @@
   font-style: normal;
 }
 body {
+  display: flex;
   background-color: var(--color-grey-100);
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 13px;
@@ -40,12 +41,31 @@ body {
   line-height: 1.5;
   min-height: 100vh;
   padding: 24px;
+  justify-content: center;
+  align-items: center;
 }
 .container {
   max-width: 1110px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 10px;
   width: 100%;
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(100%);
+  border: 0;
+}
+
+.attribution {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card_title {
@@ -63,18 +83,16 @@ body {
   letter-spacing: normal;
   word-spacing: normal;
 }
-.card_name {
-  line-height: 0.3;
-}
+
 .card_quote {
-  word-spacing: 0.3px;
+  word-spacing: 0.5px;
 }
 
 .card {
   border-radius: 8px;
   box-shadow: 2px 2px 2px 2px var(--color-grey-200);
   overflow: hidden;
-  padding: 2rem;
+  padding: 1.7rem;
   position: relative;
 }
 
@@ -98,7 +116,7 @@ body {
   background-image: url(images/bg-pattern-quotation.svg);
   background-position: right 50px top 0;
   background-repeat: no-repeat;
-  background-size: 140px;
+  background-size: 160px;
   color: var(--color-grey-100);
   grid-area: daniel;
   grid-column: span 2;
@@ -163,8 +181,11 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 100vh;
     overflow-x: hidden;
+  }
+  .attribution {
+    display: none;
   }
 }
